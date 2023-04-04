@@ -1,4 +1,5 @@
 # import random
+import math
 
 # A = [1-x for x in range(1, 11, 1)]
 # print(A)
@@ -43,17 +44,22 @@
 #
 # print(iloczyn())
 
-def iloczyn2():
-    print("nic")
-
-
-iloczyn2()
-
 # zakupy = {"mleko": 4, "masło": 6, "chleb": 4, "ser": 8, "twarozek": 5}
 #
 #
-# def koszt(lista):
+# def koszt(**lista):
 #     print(len(lista))
+#     print(sum(lista.values()))
 #
 #
-# koszt(zakupy)
+# koszt(**zakupy)
+
+
+n = float(input("podaj liczbe nieujemna "))
+try:
+    print(math.sqrt(n))
+except ValueError:
+    if type(n) != float:
+        print("nie wczytano liczby")
+    elif n < 0:
+        print("podano liczbe ujemna")
