@@ -63,12 +63,12 @@ import numpy as np
 # print("transpozycja c", f)
 # print("wymiary c", f.shape)
 
-# a = np.array([0, 1, 2])
-# b = np.array([0, 1, 2])
-#
-# # MNOZENIE MACIERZY (PYTHON ZAMIENIA DOMYSLNIE WYMIARY MACIERZY b)
-# c = np.dot(a, b)
-# print(c)
+a = np.array([0, 1, 2])
+b = np.array([0, 1, 2])
+
+# MNOZENIE MACIERZY (PYTHON ZAMIENIA DOMYSLNIE WYMIARY MACIERZY b)
+c = np.dot(a, b)
+print(c)
 #
 # # MNOZENIE ELEMENTOW
 # d = a * b

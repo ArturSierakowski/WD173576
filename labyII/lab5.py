@@ -61,26 +61,48 @@ import random
 
 
 # ZADANIE 7
-# def macierz(n):
-#     mac = np.full((n, n), 2)
-#     for i in range(1, n):
-#         mac += np.diag([2 * i for _ in range(n - i)], k=i)
-#         mac += np.diag([2 * i for _ in range(n - i)], k=-i)
-#     return mac
-#
-#
-# print(macierz(3))
+def macierz(n):
+    mac = np.full((n, n), 2)
+    for i in range(1, n):
+        mac += np.diag([2 * i for _ in range(n - i)], k=i)
+        mac += np.diag([2 * i for _ in range(n - i)], k=-i)
+    return mac
+
+
+print(macierz(3))
 
 
 # ZADANIE 8
-def podziel(mac, kierunek):
-    return
-
-
-mac = np.arange(16).reshape((4, 4))
-print(podziel(mac, 0))
+# def podziel(tab, kierunek):
+#     print(tab)
+#     if kierunek == 'poziomo':
+#         if tab.shape[0] % 2 != 0:
+#             return
+#         p1 = tab[0:int(tab.shape[0]/2), :]
+#         p2 = tab[int(tab.shape[0]/2):, :]
+#         print(p1)
+#         print(p2)
+#     elif kierunek == 'pionowo':
+#         if tab.shape[1] % 2 != 0:
+#             return
+#         p1 = tab[:, 0:int(tab.shape[1]/2)]
+#         p2 = tab[:, int(tab.shape[1]/2):]
+#         print(p1)
+#         print(p2)
+#
+#
+# podziel(np.arange(16).reshape((4, 4)), kierunek='pionowo')
 
 
 # ZADANIE 9
-def n_ty_wyraz(a1, n, r):
-    return a1 + (n - 1) * r
+# def n_ty_wyraz(a1, n, r):
+#     return a1 + n * r
+#
+#
+# macierz = np.ones(25, dtype='int')
+# for i in range(len(macierz)):
+#     element = n_ty_wyraz(3, i, 3)
+#     macierz[i] = element
+#
+# macierz = macierz.reshape((5, 5))
+# print(macierz)

@@ -1,3 +1,5 @@
+import math
+
 # ZADANIE 1
 # def cg(n, a, q):
 #     for i in range(1, n):
@@ -36,11 +38,39 @@
 
 
 # ZADANIE 4
-def srednia_wieku(** kwargs):
-    suma = 0
-    for value in kwargs.values():
-        suma += value
-    return suma / len(kwargs)
+# def srednia_wieku(** kwargs):
+#     suma = 0
+#     for value in kwargs.values():
+#         suma += value
+#     return suma / len(kwargs)
+#
+#
+# print(srednia_wieku(Adam=21, Artur=20, Joanna=49, Konrad=28))
 
+# ZADANIE 5
+# licznik = 0
+#
+#
+# def funkcja():
+#     global licznik
+#     licznik += 1
+#     print(f"funkcja wywolana {licznik} razy")
+#
+#
+# funkcja()
+# funkcja()
 
-print(srednia_wieku(Adam=21, Artur=20, Joanna=49, Konrad=28))
+# ZADANIE 6
+print(math.comb(5, 3))
+print(math.fabs(-3.4))
+print(math.fsum([4, 9, -2, 33, 11]))
+print(math.gcd(60, 24))
+print(math.floor(math.sqrt(5)))
+print(math.exp(6))
+print(math.log(5, 2))
+print(math.log10(5))
+print(math.log(6))
+print(math.log(625, 5))
+print(math.asin(1/2))
+tau = 2 * math.pi
+print(tau / 2)
