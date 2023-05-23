@@ -74,3 +74,11 @@ print(math.log(625, 5))
 print(math.asin(1/2))
 tau = 2 * math.pi
 print(tau / 2)
+
+
+# ZADANIE 7
+def calculate_tax(income, /, *, tax_rate=0.1):
+    return income * tax_rate
+
+
+print(calculate_tax(1000))

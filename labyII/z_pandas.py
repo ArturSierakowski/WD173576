@@ -1,8 +1,8 @@
 import pandas as pd
 
 # ZADANIE 1
-# xlsx = pd.ExcelFile('imiona.xlsx')
-# df = pd.read_excel(xlsx, header=0)
+xlsx = pd.ExcelFile('imiona.xlsx')
+df = pd.read_excel(xlsx, header=0)
 
 # ZADANIE 2
 # print(df[df.Liczba > 1000])
@@ -29,10 +29,10 @@ import pandas as pd
 # print(imiona.loc['K']['Liczba'].idxmax())
 
 # IMIE I ILOSC
-# grouped = df.groupby(['Plec', 'Imie'])
-# imiona = grouped.agg({'Liczba': 'sum'})
-# idx = imiona.groupby('Plec')['Liczba'].idxmax()
-# print(imiona.loc[idx, 'Liczba'])
+grouped = df.groupby(['Plec', 'Imie'])
+imiona = grouped.agg({'Liczba': 'sum'})
+idx = imiona.groupby('Plec')['Liczba'].idxmax()
+print(imiona.loc[idx, 'Liczba'])
 
 # ZADANIE 3
 df = pd.read_csv('zamowienia.csv', header=0, sep=';')
@@ -55,8 +55,8 @@ df = pd.read_csv('zamowienia.csv', header=0, sep=';')
 
 # print(round(df.Utarg.mean(), 2))
 
-df_2004 = df[df['Data zamowienia'].str.contains('2004')]
-df_2005 = df[df['Data zamowienia'].str.contains('2005')]
-
-df_2004.to_csv('zamowienia_2004.csv', index=False, sep=';', decimal='.')
-df_2005.to_csv('zamowienia_2005.csv', index=False, sep=';', decimal='.')
+# df_2004 = df[df['Data zamowienia'].str.contains('2004')]
+# df_2005 = df[df['Data zamowienia'].str.contains('2005')]
+#
+# df_2004.to_csv('zamowienia_2004.csv', index=False, sep=';', decimal='.')
+# df_2005.to_csv('zamowienia_2005.csv', index=False, sep=';', decimal='.')
