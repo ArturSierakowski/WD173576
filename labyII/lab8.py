@@ -138,12 +138,44 @@ print(grupa)
 # ts.plot()
 # plt.show()
 
-# WYKRES KOLOWY
-df = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
-print(df)
-grupa = df.groupby('Imię i nazwisko').agg({'Wartość zamówienia': [sum]})
-grupa.plot(kind='pie', subplots=True, autopct='%.2f%%', fontsize=20,
-           figsize=(6, 6), colors=['red', 'green'])
-plt.legend(loc='lower right')
-plt.title('Procent zamówieńia dla sprzedawcy')
-plt.show()
+# WYKRES KOLOWY Z PANDASA
+# df = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
+# print(df)
+# grupa = df.groupby('Imię i nazwisko').agg({'Wartość zamówienia': [sum]})
+# grupa.plot(kind='pie', subplots=True, autopct='%.2f%%', fontsize=20,
+#            figsize=(6, 6), colors=['red', 'green'])
+# plt.legend(loc='lower right')
+# plt.title('Procent zamówienia dla sprzedawcy')
+# plt.show()
+
+# WYKRES KOLOWY Z MATPLOTLIBA
+# df = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
+# print(df)
+# seria = df.groupby('Imię i nazwisko')['Wartość zamówienia'].sum()
+# wedges, texts, autotext = plt.pie(x=seria, labels=seria.index, autopct=lambda pct: "{:.1f}%".format(pct),
+#                                   textprops=dict(color="black"), colors=['red', 'green'])
+# print(autotext)
+# plt.title('Suma zamówień dla sprzedawców')
+# plt.legend(loc='lower right')
+# plt.ylabel('Procentowy wynik wartości zamówienia')
+# plt.show()
+
+# SREDNIA KROCZACA Z PANDASA
+# ts = pd.Series(np.random.randn(1000))
+# ts = ts.cumsum()
+#
+# df = pd.DataFrame(ts, columns=['wartości'])
+# print(df)
+# df['Średnia krocząca'] = df.rolling(window=50).mean()
+# df.plot()
+# plt.legend()
+# plt.show()
+
+# HISTOGRAM Z MATPLOTLIBA
+# x = np.random.randn(10000)
+# plt.hist(x, bins=50, facecolor='g', alpha=0.75, density=True)
+# plt.xlabel('wartosci')
+# plt.ylabel('prawdopodobienstwo')
+# plt.title('histogram')
+# plt.grid()
+# plt.show()
