@@ -57,8 +57,8 @@ plt.ylabel('Liczba narodzonych dzieci')
 # wykres 2
 plt.subplot(1, 3, 2)
 x = df['Rok'].unique()
-kobiety = df[(df.Plec == 'K')].groupby('Rok').agg({'Liczba':['sum']}).values
-mezczyzni = df[(df.Plec == 'M')].groupby('Rok').agg({'Liczba':['sum']}).values
+kobiety = df[(df.Plec == 'K')].groupby('Rok').agg({'Liczba':['sum']}).wartosci
+mezczyzni = df[(df.Plec == 'M')].groupby('Rok').agg({'Liczba':['sum']}).wartosci
 plt.plot(x, kobiety, label="Kobiety")
 plt.plot(x, mezczyzni, label="Mężczyźni")
 plt.xlabel('Rok')
